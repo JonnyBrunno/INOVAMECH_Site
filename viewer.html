@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    INOVAMECH
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="style_inovamech.css"
+  >
+
+</head>
+
+<body>
+
+
+  <!-- =========================================
+       HOME BUTTON
+  ========================================== -->
+
+  <a
+    id="viewer-home-button"
+    class="home-button"
+    href="index.html"
+  >
+
+    <span>⌂</span>
+
+  </a>
+
+
+  <!-- =========================================
+       HEADER
+  ========================================== -->
+
+  <header class="topbar">
+
+<div class="brand">
+
+  <img
+    src="logoBranco-removebg.png"
+    alt="INOVAMECH"
+    class="brand-logo"
+  >
+
+</div>
+
+  </header>
+
+
+  <!-- =========================================
+       VIEWER LAYOUT
+  ========================================== -->
+
+  <main class="viewer-layout">
+
+
+    <!-- =====================================
+         DOCUMENTO
+    ====================================== -->
+
+    <section class="viewer-content">
+
+      <iframe
+        id="drive-viewer"
+        allowfullscreen
+      ></iframe>
+
+    </section>
+
+
+    <!-- =====================================
+         SIDEBAR
+    ====================================== -->
+
+    <aside class="viewer-sidebar">
+
+
+      <!-- =================================
+           ACTIONS
+      ================================== -->
+
+      <div class="viewer-card">
+
+        <div class="viewer-actions">
+
+          <a
+            id="download-btn"
+            class="viewer-btn"
+            target="_blank"
+          >
+            ⬇ Download
+          </a>
+
+
+          <button
+            id="favorite-btn"
+            class="viewer-btn"
+          >
+            ⭐ Favoritar
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================
+           COMMENTS
+      ================================== -->
+
+      <div class="viewer-card">
+
+        <h2 class="comment-title">
+
+          Comentários
+
+        </h2>
+
+        <textarea
+          id="comment-input"
+          placeholder="Digite um comentário..."
+        ></textarea>
+
+        <button
+          id="comment-btn"
+          class="viewer-btn"
+        >
+          Enviar Comentário
+        </button>
+
+        <div id="comments-list"></div>
+
+      </div>
+
+    </aside>
+
+  </main>
+
+
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
+
+  <footer class="footer">
+
+    © 2026 INOVAMECH • Laboratório de Inovação em Mecatrônica
+
+  </footer>
+
+
+  <!-- =========================================
+       SCRIPT
+  ========================================== -->
+
+  <script>
+
+    /* =====================================
+       PARAMS
+    ====================================== */
+
+    const params =
+
+    new URLSearchParams(
+      window.location.search
+    );
+
+
+    const fileId =
+    params.get("id");
+
+
+    const from =
+    params.get("from");
+
+
+    /* =====================================
+       IFRAME
+    ====================================== */
+
+    const iframe =
+
+    document.getElementById(
+      "drive-viewer"
+    );
+
+
+    iframe.src =
+
+    `https://drive.google.com/file/d/${fileId}/preview`;
+
+
+    /* =====================================
+       DOWNLOAD
+    ====================================== */
+
+    document
+      .getElementById(
+        "download-btn"
+      )
+      .href =
+
+      `https://drive.google.com/uc?export=download&id=${fileId}`;
+
+
+    /* =====================================
+       HOME BUTTON
+    ====================================== */
+
+    const homeButton =
+
+    document.getElementById(
+      "viewer-home-button"
+    );
+
+
+    /* =====================================
+       DESTIMECH
+    ====================================== */
+
+    if(from === "destimech"){
+
+      homeButton.href =
+      "index.html";
+
+    }
+
+
+    /* =====================================
+       ROBÓTICA
+    ====================================== */
+
+    else if(from === "robotica"){
+
+      localStorage.setItem(
+        "academicTab",
+        "robotica-grid"
+      );
+
+      homeButton.href =
+      "pages/academico.html";
+
+    }
+
+
+    /* =====================================
+       INFORMÁTICA
+    ====================================== */
+
+    else if(from === "informatica"){
+
+      localStorage.setItem(
+        "academicTab",
+        "informatica-grid"
+      );
+
+      homeButton.href =
+      "pages/academico.html";
+
+    }
+
+
+    /* =====================================
+       COMP APLICADA
+    ====================================== */
+
+    else if(from === "compaplicada"){
+
+      localStorage.setItem(
+        "academicTab",
+        "comp-grid"
+      );
+
+      homeButton.href =
+      "pages/academico.html";
+
+    }
+
+
+    /* =====================================
+       INDEX
+    ====================================== */
+
+    else if(from === "index"){
+
+      homeButton.href =
+      "index.html";
+
+    }
+
+
+    /* =====================================
+       OUTRAS PÁGINAS
+    ====================================== */
+
+    else if(from){
+
+      homeButton.href =
+      `pages/${from}.html`;
+
+    }
+
+
+    /* =====================================
+       FALLBACK
+    ====================================== */
+
+    else{
+
+      homeButton.href =
+      "index.html";
+
+    }
+
+
+    /* =====================================
+       FAVORITOS
+    ====================================== */
+
+    const favoriteBtn =
+
+    document.getElementById(
+      "favorite-btn"
+    );
+
+
+    favoriteBtn.addEventListener(
+
+      "click",
+
+      () => {
+
+        let favorites =
+
+        JSON.parse(
+
+          localStorage.getItem(
+            "favorites"
+          )
+
+        ) || [];
+
+
+        if(
+
+          !favorites.includes(fileId)
+
+        ){
+
+          favorites.push(fileId);
+
+
+          localStorage.setItem(
+
+            "favorites",
+
+            JSON.stringify(favorites)
+
+          );
+
+
+          favoriteBtn.innerHTML =
+          "⭐ Favoritado";
+
+        }
+
+        else{
+
+          favoriteBtn.innerHTML =
+          "⭐ Já Favoritado";
+
+        }
+
+      }
+
+    );
+
+
+    /* =====================================
+       COMMENTS
+    ====================================== */
+
+    const commentInput =
+
+    document.getElementById(
+      "comment-input"
+    );
+
+
+    const commentBtn =
+
+    document.getElementById(
+      "comment-btn"
+    );
+
+
+    const commentsList =
+
+    document.getElementById(
+      "comments-list"
+    );
+
+
+    function loadComments(){
+
+      const comments =
+
+      JSON.parse(
+
+        localStorage.getItem(
+          `comments_${fileId}`
+        )
+
+      ) || [];
+
+
+      commentsList.innerHTML = "";
+
+
+      comments.forEach(comment => {
+
+        commentsList.innerHTML += `
+
+          <div class="comment-card">
+
+            ${comment}
+
+          </div>
+
+        `;
+
+      });
+
+    }
+
+
+    commentBtn.addEventListener(
+
+      "click",
+
+      () => {
+
+        const text =
+
+        commentInput.value.trim();
+
+
+        if(!text) return;
+
+
+        const comments =
+
+        JSON.parse(
+
+          localStorage.getItem(
+            `comments_${fileId}`
+          )
+
+        ) || [];
+
+
+        comments.push(text);
+
+
+        localStorage.setItem(
+
+          `comments_${fileId}`,
+
+          JSON.stringify(comments)
+
+        );
+
+
+        commentInput.value = "";
+
+
+        loadComments();
+
+      }
+
+    );
+
+
+    loadComments();
+
+  </script>
+
+</body>
+</html>

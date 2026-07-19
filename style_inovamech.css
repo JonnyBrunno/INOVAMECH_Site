@@ -1,0 +1,1897 @@
+/* ==================================================
+   VARIÁVEIS
+================================================== */
+
+:root{
+
+  --accent:#00e5ff;
+
+  --accent-soft:
+  rgba(0,229,255,0.25);
+
+  --bg-main:#1f6fa6;
+
+  --panel-bg:
+  rgba(6,14,30,0.85);
+
+  --panel-hover:
+  rgba(6,14,30,0.96);
+
+  --text-main:#ffffff;
+
+  --text-muted:#cfd8dc;
+
+}
+
+
+/* ==================================================
+   RESET
+================================================== */
+
+*{
+
+  margin:0;
+
+  padding:0;
+
+  box-sizing:border-box;
+
+  font-family:
+  "Segoe UI",
+  Arial,
+  sans-serif;
+}
+
+
+/* ==================================================
+   BODY
+================================================== */
+
+body{
+
+  min-height:100vh;
+
+  display:flex;
+
+  flex-direction:column;
+
+  color:var(--text-main);
+
+  background-color:var(--bg-main);
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(255,255,255,0.25) 1px,
+      transparent 1px
+    ),
+
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.25) 1px,
+      transparent 1px
+    ),
+
+    linear-gradient(
+      to right,
+      rgba(255,255,255,0.7) 2px,
+      transparent 2px
+    ),
+
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.7) 2px,
+      transparent 2px
+    );
+
+  background-size:
+    20px 20px,
+    20px 20px,
+    100px 100px,
+    100px 100px;
+}
+
+
+/* ==================================================
+   MAIN FLEX
+================================================== */
+
+.container{
+
+  flex:1;
+
+  width:100%;
+
+  max-width:1400px;
+
+  margin:auto;
+
+  padding:
+  0 30px 100px;
+}
+
+
+/* ==================================================
+   TOPO
+================================================== */
+
+.topbar{
+
+  text-align:center;
+
+  padding:
+  60px 20px 35px;
+}
+
+
+.brand{
+
+  display:inline-block;
+
+  padding:
+  18px 40px;
+
+  border-radius:22px;
+
+  background:
+  rgba(6,14,30,0.55);
+
+  backdrop-filter:blur(8px);
+
+  box-shadow:
+    0 20px 38px rgba(0,0,0,0.65),
+    0 0 32px rgba(0,229,255,0.35);
+}
+
+
+.brand h1{
+
+  font-size:40px;
+
+  letter-spacing:5px;
+
+  color:var(--accent);
+
+  text-shadow:
+    0 6px 14px rgba(0,0,0,0.95),
+    0 0 30px rgba(0,229,255,0.9);
+}
+
+
+/* ==================================================
+   MENU PRINCIPAL (horizontal)
+================================================== */
+
+.tabs-center{
+
+  display:flex;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:18px;
+
+  width:fit-content;
+
+  margin:
+  20px auto 70px;
+
+  padding:
+  18px 30px;
+
+  border-radius:24px;
+
+  background:var(--panel-bg);
+
+  box-shadow:
+    0 18px 36px rgba(0,0,0,0.55),
+    0 0 26px rgba(0,229,255,0.18);
+}
+
+
+.tab-link{
+
+  text-decoration:none;
+
+  color:var(--text-muted);
+
+  border:
+  1px solid rgba(255,255,255,0.22);
+
+  border-radius:16px;
+
+  padding:
+  12px 24px;
+
+  font-size:15px;
+
+  font-weight:600;
+
+  transition:0.3s;
+}
+
+
+.tab-link:hover{
+
+  color:white;
+
+  border-color:var(--accent);
+
+  box-shadow:
+  0 0 14px rgba(0,229,255,0.45);
+}
+
+
+.tab-link.active{
+
+  color:white;
+
+  background:rgba(0,229,255,0.16);
+
+  border-color:var(--accent);
+
+  box-shadow:
+  0 0 16px rgba(0,229,255,0.4);
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero-card{
+
+  background:var(--panel-bg);
+
+  border-radius:28px;
+
+  padding:60px;
+
+  border:
+  1px solid rgba(255,255,255,0.12);
+
+  box-shadow:
+  0 20px 34px rgba(0,0,0,0.45);
+}
+
+
+.hero-card h2{
+
+  font-size:38px;
+
+  margin-bottom:28px;
+
+  color:var(--accent);
+
+  line-height:1.3;
+}
+
+
+.hero-card p{
+
+  color:var(--text-muted);
+
+  line-height:2;
+
+  font-size:17px;
+
+  text-align:justify;
+}
+
+
+/* ==================================================
+   SECTION TITLES (usado na Home: DESTiMech, Recomendações)
+================================================== */
+
+.section-header{
+
+  display:flex;
+
+  justify-content:center;
+
+  margin:
+  90px 0 40px;
+}
+
+
+.section-header h2{
+
+  display:inline-block;
+
+  padding:
+  18px 36px;
+
+  border-radius:22px;
+
+  background:
+  rgba(6,14,30,0.55);
+
+  backdrop-filter:blur(6px);
+
+  color:var(--accent);
+
+  font-size:30px;
+
+  box-shadow:
+    0 20px 38px rgba(0,0,0,0.65),
+    0 0 32px rgba(0,229,255,0.35);
+
+  text-shadow:
+    0 0 22px rgba(0,229,255,0.8);
+}
+
+
+/* ==================================================
+   GRID (cards vindos do Google Drive)
+================================================== */
+
+.drive-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(3,320px);
+
+  justify-content:center;
+
+  gap:36px;
+}
+
+
+/* ==================================================
+   CARD
+================================================== */
+
+.drive-card{
+
+  display:flex;
+
+  flex-direction:column;
+
+  text-decoration:none;
+
+  background:var(--panel-bg);
+
+  border-radius:24px;
+
+  overflow:hidden;
+
+  border:
+  1px solid rgba(255,255,255,0.12);
+
+  transition:0.35s;
+
+  height:100%;
+}
+
+
+.drive-card:hover{
+
+  transform:translateY(-10px);
+
+  background:var(--panel-hover);
+
+  border-color:var(--accent);
+
+  box-shadow:
+    0 22px 34px rgba(0,0,0,0.5),
+    0 0 26px rgba(0,229,255,0.25);
+}
+
+
+/* ==================================================
+   PREVIEW
+================================================== */
+
+.drive-preview{
+
+  width:100%;
+
+  height:240px;
+
+  object-fit:cover;
+
+  background:#0f172a;
+
+  border-bottom:
+  1px solid rgba(255,255,255,0.06);
+}
+
+
+/* ==================================================
+   DRIVE INFO
+================================================== */
+
+.drive-info{
+
+  width:100%;
+
+  min-height:92px;
+
+  padding:20px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+  background:
+  linear-gradient(
+    180deg,
+    rgba(6,14,30,0.98),
+    rgba(6,14,30,0.90)
+  );
+
+  border-top:
+  1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(8px);
+}
+
+
+/* ==================================================
+   DRIVE TITLE
+================================================== */
+
+.drive-info h3{
+
+  color:white;
+
+  font-size:16px;
+
+  font-weight:700;
+
+  line-height:1.6;
+
+  letter-spacing:0.4px;
+
+  text-shadow:
+    0 2px 10px rgba(0,0,0,0.75);
+
+  overflow:hidden;
+
+  display:-webkit-box;
+
+  -webkit-line-clamp:2;
+
+  -webkit-box-orient:vertical;
+}
+
+
+/* ==================================================
+   RECOMMEND (Wokwi, UniRobótica, GitHub)
+================================================== */
+
+.recommend-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(3,320px);
+
+  justify-content:center;
+
+  gap:36px;
+}
+
+
+.recommend-card{
+
+  text-decoration:none;
+
+  background:var(--panel-bg);
+
+  border-radius:24px;
+
+  padding:30px;
+
+  border:
+  1px solid rgba(255,255,255,0.12);
+
+  transition:0.35s;
+}
+
+
+.recommend-card:hover{
+
+  transform:translateY(-10px);
+
+  background:var(--panel-hover);
+
+  border-color:var(--accent);
+
+  box-shadow:
+    0 22px 34px rgba(0,0,0,0.5),
+    0 0 26px rgba(0,229,255,0.25);
+}
+
+
+.recommend-card h3{
+
+  color:var(--accent);
+
+  margin-bottom:18px;
+
+  font-size:24px;
+}
+
+
+.recommend-card p{
+
+  color:var(--text-muted);
+
+  line-height:1.8;
+}
+
+
+/* ==================================================
+   HOME BUTTON
+   (botão "Voltar" — o href é calculado dinamicamente
+   em configureHomeButton(), dentro de script_inovamech.js,
+   seguindo a hierarquia do site em vez do histórico
+   do navegador)
+================================================== */
+
+.home-button{
+
+  position:fixed;
+
+  top:24px;
+
+  left:24px;
+
+  width:56px;
+
+  height:56px;
+
+  border-radius:18px;
+
+  background:
+  rgba(6,14,30,0.84);
+
+  border:
+  1px solid rgba(255,255,255,0.12);
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-decoration:none;
+
+  backdrop-filter:blur(8px);
+
+  z-index:9999;
+
+  cursor:pointer;
+
+  transition:0.35s;
+
+  box-shadow:
+    0 12px 22px rgba(0,0,0,0.45),
+    0 0 18px rgba(0,229,255,0.18);
+}
+
+
+.home-button span,
+.home-button svg{
+
+  width:26px;
+
+  height:26px;
+
+  color:var(--accent);
+}
+
+
+.home-button span{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  width:100%;
+
+  height:100%;
+
+  font-size:26px;
+
+  line-height:1;
+}
+
+
+.home-button:hover{
+
+  transform:translateY(-4px);
+
+  border-color:var(--accent);
+
+  box-shadow:
+    0 18px 26px rgba(0,0,0,0.5),
+    0 0 22px rgba(0,229,255,0.38);
+}
+
+
+/* ==================================================
+   SIDE NAV
+   (menu fixo na lateral, sempre visível,
+   gerado em createSideNav() dentro do JS)
+================================================== */
+
+#side-nav{
+
+  position:fixed;
+
+  top:96px;
+
+  left:24px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:14px;
+
+  z-index:9998;
+}
+
+
+/* ==========================================
+   ITEM (mesmo estilo do .home-button)
+========================================== */
+
+.side-nav-item{
+
+  width:56px;
+
+  height:56px;
+
+  border-radius:18px;
+
+  background:
+  rgba(6,14,30,0.84);
+
+  border:
+  1px solid rgba(255,255,255,0.12);
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-decoration:none;
+
+  backdrop-filter:blur(8px);
+
+  color:var(--accent);
+
+  font-size:24px;
+
+  line-height:1;
+
+  position:relative;
+
+  transition:0.35s;
+
+  box-shadow:
+    0 12px 22px rgba(0,0,0,0.45),
+    0 0 18px rgba(0,229,255,0.18);
+}
+
+
+.side-nav-item:hover{
+
+  transform:translateX(6px);
+
+  border-color:var(--accent);
+
+  box-shadow:
+    0 18px 26px rgba(0,0,0,0.5),
+    0 0 22px rgba(0,229,255,0.38);
+}
+
+
+/* ==========================================
+   SVG DENTRO DO ITEM
+   (mesmo tamanho/cor em todos os ícones,
+   igual ao ícone do home-button)
+========================================== */
+
+.side-nav-item svg{
+
+  width:24px;
+
+  height:24px;
+
+  color:var(--accent);
+
+  flex-shrink:0;
+}
+
+
+/* ==========================================
+   ITEM ATIVO (página atual)
+========================================== */
+
+.side-nav-item.active{
+
+  border-color:var(--accent);
+
+  background:
+  rgba(0,229,255,0.14);
+
+  box-shadow:
+    0 0 20px rgba(0,229,255,0.4);
+}
+
+
+/* ==========================================
+   TOOLTIP (aparece à direita no hover)
+========================================== */
+
+.side-nav-item::after{
+
+  content:attr(data-title);
+
+  position:absolute;
+
+  left:72px;
+
+  top:50%;
+
+  transform:
+  translate(-8px,-50%);
+
+  white-space:nowrap;
+
+  background:
+  rgba(6,14,30,0.96);
+
+  color:var(--text-main);
+
+  padding:
+  8px 14px;
+
+  border-radius:12px;
+
+  font-size:13px;
+
+  font-weight:600;
+
+  border:
+  1px solid rgba(255,255,255,0.10);
+
+  opacity:0;
+
+  pointer-events:none;
+
+  transition:0.25s;
+}
+
+
+.side-nav-item:hover::after{
+
+  opacity:1;
+
+  transform:
+  translate(0,-50%);
+}
+
+
+/* ==================================================
+   ÍCONE INSTAGRAM NA HOME
+   (mesmo layout do .home-button e do .side-nav-item,
+   só que fixo no canto superior direito, já que a
+   home não tem botão de voltar)
+================================================== */
+
+.social-button{
+
+  position:fixed;
+
+  top:24px;
+
+  right:24px;
+
+  width:56px;
+
+  height:56px;
+
+  border-radius:18px;
+
+  background:rgba(6,14,30,0.84);
+
+  border:1px solid rgba(255,255,255,0.12);
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-decoration:none;
+
+  backdrop-filter:blur(8px);
+
+  z-index:9999;
+
+  cursor:pointer;
+
+  transition:0.35s;
+
+  box-shadow:
+    0 12px 22px rgba(0,0,0,0.45),
+    0 0 18px rgba(0,229,255,0.18);
+}
+
+
+.social-button svg{
+
+  width:26px;
+
+  height:26px;
+
+  color:var(--accent);
+}
+
+
+.social-button:hover{
+
+  transform:translateY(-4px);
+
+  border-color:var(--accent);
+
+  box-shadow:
+    0 18px 26px rgba(0,0,0,0.5),
+    0 0 22px rgba(0,229,255,0.38);
+}
+
+
+/* ==================================================
+   VIEWER
+================================================== */
+
+.viewer-layout{
+
+  width:100%;
+
+  max-width:1700px;
+
+  margin:auto;
+
+  padding:
+  0 30px 100px;
+
+  display:grid;
+
+  grid-template-columns:
+  1fr 380px;
+
+  gap:36px;
+}
+
+
+.viewer-content{
+
+  background:
+  rgba(6,14,30,0.92);
+
+  border-radius:28px;
+
+  overflow:hidden;
+
+  border:
+  1px solid rgba(255,255,255,0.10);
+
+  box-shadow:
+    0 24px 42px rgba(0,0,0,0.45),
+    0 0 28px rgba(0,229,255,0.10);
+}
+
+
+#drive-viewer{
+
+  width:100%;
+
+  height:86vh;
+
+  border:none;
+
+  background:#0f172a;
+}
+
+
+/* ==================================================
+   SIDEBAR (painel do viewer, à direita)
+================================================== */
+
+.viewer-sidebar{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:24px;
+}
+
+
+.viewer-card{
+
+  background:
+  rgba(6,14,30,0.90);
+
+  border-radius:24px;
+
+  padding:28px;
+
+  border:
+  1px solid rgba(255,255,255,0.10);
+
+  box-shadow:
+    0 18px 30px rgba(0,0,0,0.38);
+}
+
+
+/* ==================================================
+   ACTIONS
+================================================== */
+
+.viewer-actions{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:18px;
+}
+
+
+.viewer-btn{
+
+  width:100%;
+
+  border:none;
+
+  border-radius:18px;
+
+  padding:16px;
+
+  cursor:pointer;
+
+  text-decoration:none;
+
+  text-align:center;
+
+  background:
+  rgba(0,229,255,0.12);
+
+  color:white;
+
+  font-size:15px;
+
+  font-weight:600;
+
+  transition:0.35s;
+}
+
+
+.viewer-btn:hover{
+
+  transform:translateY(-4px);
+
+  background:
+  rgba(0,229,255,0.20);
+
+  box-shadow:
+  0 0 22px rgba(0,229,255,0.28);
+}
+
+
+/* ==================================================
+   COMMENTS
+================================================== */
+
+.comment-title{
+
+  color:var(--accent);
+
+  margin-bottom:20px;
+
+  font-size:24px;
+}
+
+
+#comment-input{
+
+  width:100%;
+
+  min-height:140px;
+
+  resize:vertical;
+
+  border:none;
+
+  border-radius:18px;
+
+  background:
+  rgba(255,255,255,0.05);
+
+  padding:18px;
+
+  color:white;
+
+  margin-bottom:18px;
+
+  font-size:15px;
+
+  line-height:1.7;
+}
+
+
+.comment-card{
+
+  background:
+  rgba(255,255,255,0.05);
+
+  border-radius:18px;
+
+  padding:16px;
+
+  margin-top:16px;
+
+  line-height:1.8;
+
+  color:white;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.footer{
+
+  margin-top:auto;
+
+  text-align:center;
+
+  padding:28px;
+
+  background:
+  rgba(6,14,30,0.92);
+
+  color:var(--text-muted);
+
+  font-size:14px;
+}
+
+
+/* ==================================================
+   MENU ACADÊMICO (legado — usado só nas páginas
+   antigas que ainda não foram apagadas)
+================================================== */
+
+.academic-menu{
+
+  width:fit-content;
+
+  margin:
+  0 auto 50px;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:18px;
+
+  flex-wrap:wrap;
+
+  padding:
+  18px 26px;
+
+  border-radius:24px;
+
+  background:
+  rgba(6,14,30,0.84);
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(10px);
+
+  box-shadow:
+    0 16px 34px rgba(0,0,0,0.35),
+    0 0 24px rgba(0,229,255,0.12);
+}
+
+
+.academic-tab{
+
+  border:none;
+
+  outline:none;
+
+  cursor:pointer;
+
+  padding:
+  14px 24px;
+
+  border-radius:16px;
+
+  background:
+  rgba(255,255,255,0.04);
+
+  color:white;
+
+  font-size:15px;
+
+  font-weight:600;
+
+  transition:0.3s;
+}
+
+
+.academic-tab:hover{
+
+  transform:translateY(-3px);
+
+  background:
+  rgba(0,229,255,0.14);
+
+  box-shadow:
+  0 0 16px rgba(0,229,255,0.24);
+}
+
+
+.academic-tab.active{
+
+  background:
+  rgba(0,229,255,0.18);
+
+  border:
+  1px solid rgba(0,229,255,0.35);
+
+  box-shadow:
+  0 0 18px rgba(0,229,255,0.28);
+}
+
+
+.academic-section{
+
+  display:none;
+}
+
+
+.active-section{
+
+  display:grid;
+}
+
+
+/* ==================================================
+   LOGO IMAGE
+================================================== */
+
+.brand-logo{
+
+  width:100%;
+
+  max-width:420px;
+
+  height:auto;
+
+  display:block;
+
+  margin:auto;
+
+  object-fit:contain;
+
+  filter:
+    drop-shadow(
+      0 0 18px rgba(0,229,255,0.55)
+    );
+}
+
+
+/* ==================================================
+   EIXOS DE INOVAÇÃO (cards — caso volte a usar
+   grid de eixos em alguma página no futuro)
+================================================== */
+
+.eixos-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(280px,1fr));
+
+  gap:28px;
+
+  justify-items:center;
+
+  width:100%;
+
+}
+
+
+.eixo-card{
+
+  width:100%;
+
+  max-width:320px;
+
+  text-decoration:none;
+
+  background:var(--panel-bg);
+
+  border-radius:22px;
+
+  padding:32px 24px;
+
+  border:
+  1px solid rgba(255,255,255,0.12);
+
+  transition:0.35s;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  text-align:center;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+
+.eixo-card::before{
+
+  content:'';
+
+  position:absolute;
+
+  top:0;
+
+  left:0;
+
+  right:0;
+
+  bottom:0;
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(0,229,255,0.06) 0%,
+    rgba(0,229,255,0) 100%
+  );
+
+  opacity:0;
+
+  transition:0.35s;
+
+  z-index:1;
+}
+
+
+.eixo-card:hover{
+
+  transform:translateY(-10px);
+
+  background:var(--panel-hover);
+
+  border-color:var(--accent);
+
+  box-shadow:
+    0 22px 38px rgba(0,0,0,0.5),
+    0 0 28px rgba(0,229,255,0.28);
+}
+
+
+.eixo-card:hover .eixo-icon svg{
+
+  color:var(--accent);
+
+  filter:drop-shadow(0 0 10px rgba(0,229,255,0.6));
+
+  transform:scale(1.15);
+}
+
+
+.eixo-card:hover::before{
+
+  opacity:1;
+}
+
+
+.eixo-card > *{
+
+  position:relative;
+
+  z-index:2;
+}
+
+
+.eixo-icon{
+
+  font-size:56px;
+
+  margin-bottom:16px;
+
+  line-height:1;
+
+  animation:float 3s ease-in-out infinite;
+
+  width:64px;
+
+  height:64px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+}
+
+
+.eixo-icon svg{
+
+  width:100%;
+
+  height:100%;
+
+  color:var(--accent);
+
+  transition:0.35s;
+}
+
+
+.eixo-card h3{
+
+  color:var(--accent);
+
+  font-size:18px;
+
+  margin-bottom:14px;
+
+  line-height:1.4;
+
+  font-weight:700;
+
+  text-shadow:
+  0 0 16px rgba(0,229,255,0.3);
+}
+
+
+.eixo-card p{
+
+  color:var(--text-muted);
+
+  font-size:14px;
+
+  line-height:1.6;
+
+  margin:0;
+}
+
+
+/* ==================================================
+   ANIMAÇÃO FLUTUANTE
+================================================== */
+
+@keyframes float{
+
+  0%,100%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-8px);
+  }
+}
+
+
+/* ==================================================
+   ANIMAÇÃO DE ENTRADA (fade-in ao rolar a tela)
+================================================== */
+
+@keyframes fadeInUp{
+
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+
+/* ==================================================
+   ABAS INTERNAS DE CADA EIXO
+   (Introdução / Projetos / Projetos por Turmas /
+   Artigos / Tutoriais — mesmo visual do menu
+   principal: painel + botões pill)
+================================================== */
+
+.eixo-tabs-container{
+
+  display:flex;
+
+  justify-content:center;
+
+  margin:20px 0 30px;
+
+}
+
+
+.eixo-tabs{
+
+  display:flex;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:18px;
+
+  width:fit-content;
+
+  padding:18px 30px;
+
+  border-radius:24px;
+
+  background:var(--panel-bg);
+
+  box-shadow:
+    0 18px 36px rgba(0,0,0,0.55),
+    0 0 26px rgba(0,229,255,0.18);
+
+}
+
+
+.eixo-tab{
+
+  text-decoration:none;
+
+  color:var(--text-muted);
+
+  border:1px solid rgba(255,255,255,0.22);
+
+  border-radius:16px;
+
+  padding:12px 24px;
+
+  font-size:15px;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+  white-space:nowrap;
+
+}
+
+
+.eixo-tab:hover{
+
+  color:white;
+
+  border-color:var(--accent);
+
+  box-shadow:0 0 14px rgba(0,229,255,0.45);
+
+}
+
+
+.eixo-tab.active{
+
+  color:white;
+
+  background:rgba(0,229,255,0.16);
+
+  border-color:var(--accent);
+
+  box-shadow:0 0 16px rgba(0,229,255,0.4);
+
+}
+
+
+/* ==================================================
+   SEÇÕES DE CONTEÚDO DE CADA ABA
+================================================== */
+
+.eixo-section{
+
+  display:none;
+
+  animation:fadeInUp 0.4s ease-out;
+
+}
+
+
+.eixo-section.active-section{
+
+  display:block;
+
+}
+
+
+/* título "Introdução"/"Projetos"/"Artigos"/etc. dentro
+   da aba — NÃO usa mais o .section-header (aquele "pill"
+   flutuante é pensado pra separar blocos grandes e distantes,
+   tipo "DESTiMech" na Home). Aqui usamos o mesmo tratamento
+   do <h2> dentro do hero-card: cor cyan, sem caixa, alinhado
+   à esquerda — combina com o resto do conteúdo da página. */
+
+.eixo-heading{
+
+  color:var(--accent);
+
+  font-size:30px;
+
+  margin:10px 0 26px;
+
+  text-shadow:0 0 14px rgba(0,229,255,0.3);
+
+}
+
+
+/* ==================================================
+   CABEÇALHO INTERNO (título do eixo: h1 + subtítulo)
+   Agora dentro de um painel, no mesmo padrão visual
+   do resto do site (.hero-card, .brand, .viewer-card):
+   fundo escuro, borda sutil, sombra e brilho cyan.
+================================================== */
+
+.internal-header{
+
+  display:flex;
+
+  justify-content:center;
+
+  padding:50px 0 10px;
+
+}
+
+
+.internal-header-panel{
+
+  background:var(--panel-bg);
+
+  border:1px solid rgba(255,255,255,0.12);
+
+  border-radius:28px;
+
+  padding:40px 60px;
+
+  text-align:center;
+
+  box-shadow:0 20px 34px rgba(0,0,0,0.45);
+
+  max-width:900px;
+
+}
+
+
+.internal-header-panel h1{
+
+  font-size:42px;
+
+  color:var(--accent);
+
+  margin-bottom:16px;
+
+  text-shadow:0 0 20px rgba(0,229,255,0.3);
+
+}
+
+
+.eixo-subtitle{
+
+  font-size:16px;
+
+  color:var(--text-muted);
+
+  margin:0;
+
+}
+
+
+/* ==================================================
+   AJUSTE DE CONTEÚDO
+   (afasta o conteúdo do menu fixo lateral, pra nada
+   ficar escondido atrás dos ícones — só se aplica
+   nas páginas que TÊM o menu lateral, via a classe
+   .has-side-nav que o script adiciona no <body>.
+   Isso evita que a Home, que não tem menu lateral,
+   fique puxada pra direita e "descentralizada".)
+================================================== */
+
+.has-side-nav .container,
+.has-side-nav .viewer-layout{
+
+  padding-left:110px;
+}
+
+
+/* Tablet: aperta um pouco a folga lateral */
+
+@media(max-width:1024px){
+
+  .has-side-nav .container,
+  .has-side-nav .viewer-layout{
+
+    padding-left:90px;
+  }
+
+}
+
+
+/* ==================================================
+   RESPONSIVO
+================================================== */
+
+@media(max-width:1200px){
+
+  .viewer-layout{
+
+    grid-template-columns:1fr;
+  }
+
+  .drive-grid,
+  .recommend-grid{
+
+    grid-template-columns:
+    repeat(2,320px);
+  }
+
+  .eixos-grid{
+
+    grid-template-columns:
+    repeat(2,1fr);
+  }
+
+}
+
+
+@media(max-width:760px){
+
+  .drive-grid,
+  .recommend-grid{
+
+    grid-template-columns:1fr;
+  }
+
+  .eixos-grid{
+
+    grid-template-columns:1fr;
+  }
+
+  .eixo-card{
+
+    max-width:100%;
+  }
+
+  .eixo-icon{
+
+    width:52px;
+
+    height:52px;
+
+    font-size:48px;
+  }
+
+  .eixo-card h3{
+
+    font-size:16px;
+  }
+
+  .eixo-card p{
+
+    font-size:13px;
+  }
+
+  .hero-card{
+
+    padding:35px;
+  }
+
+  .hero-card h2{
+
+    font-size:28px;
+  }
+
+  .brand h1{
+
+    font-size:32px;
+  }
+
+
+  /* ====================================
+     SIDE NAV VIRA BARRA HORIZONTAL
+     NO TOPO EM TELAS PEQUENAS
+  ==================================== */
+
+  .home-button{
+
+    top:16px;
+
+    left:16px;
+
+    width:48px;
+
+    height:48px;
+  }
+
+  .social-button{
+
+    top:16px;
+
+    right:16px;
+
+    width:48px;
+
+    height:48px;
+  }
+
+  .social-button svg{
+
+    width:22px;
+
+    height:22px;
+  }
+
+  #side-nav{
+
+    top:16px;
+
+    left:72px;
+
+    right:16px;
+
+    flex-direction:row;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+  }
+
+  .side-nav-item{
+
+    width:48px;
+
+    height:48px;
+
+    font-size:20px;
+  }
+
+  .side-nav-item::after{
+
+    left:50%;
+
+    top:60px;
+
+    transform:
+    translate(-50%,-8px);
+  }
+
+  .side-nav-item:hover::after{
+
+    transform:
+    translate(-50%,0);
+  }
+
+  .has-side-nav .container,
+  .has-side-nav .viewer-layout{
+
+    padding-left:30px;
+
+    padding-top:80px;
+  }
+
+
+  /* ====================================
+     TEXTO: justificado fica com "rios"
+     de espaço em telas estreitas
+  ==================================== */
+
+  .hero-card p{
+
+    text-align:left;
+  }
+
+
+  /* ====================================
+     CABEÇALHO INTERNO (painel h1+subtítulo)
+     mais compacto no celular
+  ==================================== */
+
+  .internal-header{
+
+    padding:30px 16px 10px;
+  }
+
+  .internal-header-panel{
+
+    padding:26px 22px;
+  }
+
+  .internal-header-panel h1{
+
+    font-size:26px;
+  }
+
+  .eixo-subtitle{
+
+    font-size:14px;
+  }
+
+
+  /* ====================================
+     ABAS INTERNAS (Introdução/Projetos/etc.)
+     mais compactas no celular
+  ==================================== */
+
+  .eixo-tabs-container{
+
+    padding:0 16px;
+  }
+
+  .eixo-tabs{
+
+    padding:12px 16px;
+
+    gap:8px;
+
+    justify-content:flex-start;
+
+    overflow-x:auto;
+
+    max-width:100%;
+  }
+
+  .eixo-tab{
+
+    padding:10px 16px;
+
+    font-size:13px;
+  }
+
+
+  /* ====================================
+     MENU PRINCIPAL (tabs-center) mais
+     compacto no celular
+  ==================================== */
+
+  .tabs-center{
+
+    padding:14px 18px;
+
+    gap:10px;
+  }
+
+  .tab-link{
+
+    padding:10px 16px;
+
+    font-size:13px;
+  }
+
+}
