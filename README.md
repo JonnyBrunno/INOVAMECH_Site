@@ -1,0 +1,105 @@
+# inovaMech 
+## Laboratório de Inovação em Mecatrônica
+
+**Acesse o site do projeto:**  
+👉 https://jonnybrunno.github.io/INOVAMECH_Site/index.html
+
+---
+
+O **inovaMech – Laboratório de Inovação em Mecatrônica** é um ambiente interdisciplinar dedicado ao desenvolvimento de **tecnologias avançadas em automação e sistemas inteligentes**, integrando de forma estratégica as áreas de **mecânica, eletrônica, computação e controle**.
+
+Incorporado ao **NUPEM (Núcleo de Pesquisa em Engenharia Mecatrônica)**, o INOVAMECH atua como um polo de pesquisa, inovação e desenvolvimento tecnológico, promovendo a integração entre **academia, indústria e sociedade**.
+
+---
+
+## Sobre este Repositório
+
+Este repositório tem como finalidade:
+
+- **Desenvolvimento e manutenção do site oficial do INOVAMECH**
+- Armazenamento de **projetos, códigos, protótipos e documentos técnicos**
+- Organização de pesquisas, experimentos e materiais de apoio
+- Facilitar a colaboração entre estudantes, pesquisadores e parceiros
+
+A estrutura do repositório pode conter, entre outros:
+
+- Código-fonte do site institucional
+- Projetos de automação, IA, IoT e controle
+- Scripts, simulações e modelos computacionais
+- Documentação técnica e científica
+
+---
+
+## Objetivos do Laboratório
+
+O inovaMech tem como principais objetivos:
+
+- Fomentar pesquisas aplicadas voltadas à **indústria, sistemas autônomos e sustentáveis**
+- Desenvolver soluções tecnológicas com foco em **eficiência energética e conforto ambiental**
+- Aplicar conceitos de **Inteligência Artificial (IA), Aprendizado de Máquina (Machine Learning)** e **Internet das Coisas (IoT)**
+- Formar profissionais altamente qualificados por meio de projetos de **alta complexidade e impacto tecnológico**
+- Atuar como um ambiente colaborativo para **inovação e transferência de tecnologia**
+
+---
+
+## Infraestrutura e Tecnologias
+
+A infraestrutura do inovaMech conta com equipamentos e recursos modernos, incluindo:
+
+- Sistemas de **prototipagem rápida**
+- Estações de **simulação e modelagem computacional**
+- Sistemas colaborativos e ambientes de desenvolvimento
+- Sensores avançados e sistemas embarcados
+- Equipamentos de fabricação e testes
+- Plataformas para automação, IA, IoT e controle de sistemas dinâmicos
+
+---
+
+## Linhas de Pesquisa
+
+O laboratório apoia e desenvolve projetos nas seguintes linhas principais:
+
+1. **Sistemas Colaborativos e Autônomos**
+2. **Automação de Sistemas**
+3. **Desenvolvimento de Materiais Semicondutores**
+4. **Modelagem, Simulação e Controle de Sistemas Dinâmicos**
+5. **Sustentabilidade, Conforto Ambiental e Eficiência Energética**
+
+---
+
+## Integração com a Indústria
+
+O inovaMech atua como um **laboratório de inovação em Engenharia Mecatrônica**, promovendo:
+
+- Parcerias com empresas e instituições
+- Desenvolvimento de **pesquisa aplicada**
+- Criação de soluções com potencial de **transferência direta para o mercado**
+- Apoio à competitividade do setor industrial em nível **regional e nacional**
+
+
+---
+
+## Público Envolvido
+
+O INOVAMECH envolve:
+
+- Estudantes de **graduação e pós-graduação**
+- Pesquisadores e docentes
+- Parceiros industriais e institucionais
+
+---
+
+## Impacto
+
+Com foco na criação de tecnologias alinhadas às demandas emergentes da indústria e da sociedade, o inovaMech contribui para:
+
+- Avanços em **automação e sistemas inteligentes**
+- Melhoria da **eficiência energética e sustentabilidade**
+- Formação acadêmica e profissional de alto nível
+- Fortalecimento da inovação tecnológica no Brasil
+
+---
+
+## Observação
+
+Este repositório está em constante evolução, acompanhando o crescimento do laboratório, seus projetos e o desenvolvimento do site institucional.
