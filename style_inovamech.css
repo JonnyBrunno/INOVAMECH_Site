@@ -413,6 +413,8 @@ body{
 
   display:flex;
 
+  flex-direction:column;
+
   align-items:center;
 
   justify-content:center;
@@ -459,6 +461,21 @@ body{
   -webkit-line-clamp:2;
 
   -webkit-box-orient:vertical;
+}
+
+
+/* descrição opcional embaixo do título (usada nos
+   cards estáticos de Repositórios GitHub) */
+
+.drive-info p{
+
+  color:var(--text-muted);
+
+  font-size:13px;
+
+  line-height:1.5;
+
+  margin-top:8px;
 }
 
 
